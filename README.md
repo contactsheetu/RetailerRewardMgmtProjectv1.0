@@ -30,24 +30,28 @@
 	
 	 ```json
 	  Request Sample
-	 {
-		"amount":245.22,
-		"userID":"15",
-		"description":"Flooring"
-		
-	 }
+		 {
+		    "amount":338.2211980,
+		    "userID":"1",
+		    "description":"Post man test"
+		 }
 	```
 	
 	```json
 	Response Sample 
 	(Transaction ID and Transaction Date added back in response, acknowledging that transaction is saved successfully in DB)
-	{
-		"transactionID": "502",
-		"transactionDate": "2021-12-01",
-		"amount": 245.22,
-		"userID": "1",
-		"description": "Flooring"
-	}
+		{
+		    "transactionID": 514,
+		    "transactionDate": "2021-12-24",
+		    "amount": 338.22,
+		    "userID": 1,
+		    "rewardPoint": {
+			"id": 1,
+			"rewardPoints": 526.44,
+			"transactionID": 514
+		    },
+		    "description": "Post man test"
+		}
 	```
 
 ### REST EndPoints - Reward Points Module 
