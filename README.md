@@ -11,7 +11,7 @@
 ## Technology Stack
 - JDK 1.8.0_261
 - H2 1.4 DB (In-memory database)
-- Spring Boot v2.2.1
+- Spring Boot v2.5.7
 - Lombok 1.8.10
 - Hamcrest 2.1
 - RuleBook 0.12 
@@ -55,7 +55,7 @@
 - GET http://localhost:8083/rewardcenter/getMonthlyPoints/userID/1/month/11 ``` (Get the aggregated points earned in the provided month (and current year) for the user with given userID)```
 - GET http://localhost:8083/rewardcenter/getMonthlyPoints/userID/1/month/11/year/2020  ``` (Get the aggregated points earned in the provided month and provided year for the user with given userID)```
 - GET http://localhost:8083/rewardcenter/getQuarterlyPoints/userID/1/quarter/4/year/2021 ``` (Get the aggregated points earned in the provided quarter (1/2/3/4) and provided year for the user with given userID)```
-- GET http://localhost:8083/rewardcenter/getPointsForInterval/userID/4/startDate/2021-12-31/endDate/2021-12-01 ``` (Get the aggregated points earned in the provided duration for the user with given userID)```
+- GET http://localhost:8083/rewardcenter/getPointsForInterval/userID/4/startDate/2021-12-01/endDate/2021-12-31 ``` (Get the aggregated points earned in the provided duration for the user with given userID)```
 
 ```json
 Response Sample 
@@ -148,9 +148,9 @@ CREATE TABLE USERREWARDPOINTS (
 	PRIMARY KEY (ID))
 
 -Foreign keys relationship added in system
-ALTER TABLE REWARD_PROGRAM_RULES ADD CONSTRAINT FKIB5FJEOCXQM1W3OBIX0P9S2QI FOREIGN KEY (PROGRAMID) REFERENCES REWARD_PROGRAM
-ALTER TABLE TRANSACTION ADD CONSTRAINT FK4BO7ASLRNI69VRWVBEWUGH2FS FOREIGN KEY (USERID) REFERENCES USER
-ALTER TABLE USER_PROGRAM ADD CONSTRAINT FKT2581UIK17C8OSUFKFLUCQKUN FOREIGN KEY (PROGRAMID) REFERENCES REWARD_PROGRAM
+ALTER TABLE REWARD_PROGRAM_RULES ADD CONSTRAINT ?????????????? FOREIGN KEY (PROGRAMID) REFERENCES REWARD_PROGRAM
+ALTER TABLE TRANSACTION ADD CONSTRAINT ???????????????? FOREIGN KEY (USERID) REFERENCES USER
+ALTER TABLE USER_PROGRAM ADD CONSTRAINT ????????????????? FOREIGN KEY (PROGRAMID) REFERENCES REWARD_PROGRAM
 
 -- To insert data for users
 INSERT INTO USER("USERID", "FIRSTNAME", "LASTNAME") VALUES(1, 'Sheldon', 'Cooper')
@@ -197,7 +197,7 @@ Application loads sample data using ``` import.sql ```
 
 Tomcat is running on port ``` 8083 ```
 
-H2 console is available at http://localhost:8083/rewardcenter/h2-console/
+H2 console is available at http://localhost:8083/rewardcenter/h2
     
     **Jdbc url** - jdbc:h2:mem:rewardsystemdb
     
