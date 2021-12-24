@@ -5,6 +5,7 @@
 2. [REST EndPoints](#REST-EndPoints)
 3. [DB Schema Definition](#DB-Schema-Definition)
 4. [Running the app](#Running-the-app)
+5. [Unit Testcases](#Unit-Testcases)
 
 
 ## Technology Stack
@@ -16,9 +17,6 @@
 - RuleBook 0.12 
 
 ## REST EndPoints
-- Loads sample data (customers, programs, program rules and transactions)
-- Calculate award points for each customer
-- Reports award points grouped by month and also aggregated total 
 
 ### REST EndPoints - User Module 
 - GET http://localhost:8083/rewardcenter/getUserList ``` (List all the users)```
@@ -28,9 +26,10 @@
 ### REST EndPoints - Transaction Module 
 - GET http://localhost:8083/rewardcenter/getAllTransactions  ``` (List all the transactions in the system)```
 - GET http://localhost:8083/rewardcenter/getUserTransactions/userID/1  ``` (List all the transactions for the userID)```
-- POST http://localhost:8083/rewardcenter/addTransaction/ ``` (Add a transaction in the system)```
-	 Request Sample
+- POST http://localhost:8083/rewardcenter/addTransaction/   ``` (Add a transaction in the system)```
+	
 	 ```json
+	  Request Sample
 	 {
 		"amount":245.22,
 		"userID":"15",
@@ -40,7 +39,8 @@
 	```
 	
 	```json
-	Response Sample (Transaction ID and Transaction Date added back in response, acknowledging that transaction is saved successfully in DB)
+	Response Sample 
+	(Transaction ID and Transaction Date added back in response, acknowledging that transaction is saved successfully in DB)
 	{
 		"transactionID": "502",
 		"transactionDate": "2021-12-01",
@@ -57,8 +57,9 @@
 - GET http://localhost:8083/rewardcenter/getQuarterlyPoints/userID/1/quarter/4/year/2021 ``` (Get the aggregated points earned in the provided quarter (1/2/3/4) and provided year for the user with given userID)```
 - GET http://localhost:8083/rewardcenter/getPointsForInterval/userID/4/startDate/2021-12-31/endDate/2021-12-01 ``` (Get the aggregated points earned in the provided duration for the user with given userID)```
 
-Response Sample (Calculate reward points for  given duration and displays in below structure):
-```
+```json
+Response Sample 
+(Calculate reward points for given duration and displays in below structure):
 {
     "startDate": "2021-07-01",
     "endDate": "2021-09-30",
@@ -197,8 +198,11 @@ Application loads sample data using ``` import.sql ```
 Tomcat is running on port ``` 8083 ```
 
 H2 console is available at http://localhost:8083/rewardcenter/h2-console/
-    **Jdbc url** - jdbc:h2:mem:awards
+    
+    **Jdbc url** - jdbc:h2:mem:rewardsystemdb
+    
     **User** - sa
+    
     **Password** - password
 
 
@@ -206,5 +210,5 @@ H2 console is available at http://localhost:8083/rewardcenter/h2-console/
 
 Unit testcases written using Junit and MockMvc framework.
 
-![img_1.png](images_md/img_1.png)
+![rewardporj_unittestcases.png](images_md/rewardporj_unittestcases.png)
 
