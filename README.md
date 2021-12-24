@@ -210,5 +210,5 @@ H2 console is available at http://localhost:8083/rewardcenter/h2-console/
 
 Unit testcases written using Junit and MockMvc framework.
 
-![rewardporj_unittestcases.png](images_md/rewardporj_unittestcases.png)
+![rewardporj_unittestcases.PNG](images_md/rewardporj_unittestcases.PNG)
 
