@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Boogaloo');
+
+body {
+   font-family: 'Roboto', sans-serif;;
+  padding: 0;
+}
+.starter-template {
+  padding: 0 0 20px;
+  text-align: center;
+}
+
+
+h1{
+	color:#0000FF;
+}
+
+h2{
+	color:#FF0000;
+}
+.navbar{border-radius:0; margin-bottom:5px}
+.navbar-nav>li>a{font-size:15px}
+.top_heading{padding:0 0 20px; text-align:left}
+.home_top{padding:100px 0 0 0}
+.colr_name{color:#909098}
+.table{border-bottom:1px solid #ddd; }
+.btn{background-color:#fff; border-radius:50px; padding: 4px 10px; border-color:#ecf1f5;  transition: all 0.3s; 
+font-size:12px; box-shadow:1px 3px 3px #ecf1f5}
+.btn:hover{background-color:#c7cacc; border-color:#c7cacc; color:#fff}
+.top_heading h2{color:#b3a9a9; text-align:left}
+.monthly_rewardTable td, .monthly_rewardTable th{padding:4px 8px!important}
+.monthly_rewardTable td.colr_name { background: #ccddec;  font-size: 13px!important;}
+.monthly_rewardTable td, .monthly_rewardTable th{font-size:11px!important}
+td.txt_right, th.txt_right{text-align:right}
+
+.rewardTable td, .rewardTable th{padding:4px 8px!important}
+.rewardTable td.colr_name { background: #ccddec;  font-size: 13px!important;}
+.rewardTable td, .rewardTable th{font-size:11px!important}
+table.monthly_rewardTable th {
+    color: #aba5a5;
+}
